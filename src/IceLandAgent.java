@@ -74,7 +74,6 @@ public class IceLandAgent extends Agent {
                 }
                 ACLMessage message=blockingReceive();
                 if (message!= null) {
-                    System.out.println("Yes");
                     ACLMessage replay=new ACLMessage();
                     replay.addReceiver(message.getSender());
                     Individual best = population.getFitnessIndivd();

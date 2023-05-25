@@ -19,7 +19,7 @@ public class MasterAgent extends Agent {
 
     DFAgentDescription dfAgentDescription=new DFAgentDescription();
     ServiceDescription serviceDescription=new ServiceDescription();
-    HashMap<AID,String> iceLandAgents=new HashMap<>();
+    HashMap<String,Integer> iceLandAgents=new HashMap<>();
 
 
 
@@ -37,7 +37,6 @@ public class MasterAgent extends Agent {
                     System.out.println(agentsDescriptions.length);
                     for (DFAgentDescription dfAD:agentsDescriptions) {
                         message.addReceiver(dfAD.getName());
-                        iceLandAgents.put(dfAD.getName(),"");
                     }
                     send(message);
                 } catch (FIPAException e) {
@@ -52,8 +51,11 @@ public class MasterAgent extends Agent {
             public void action() {
                 ACLMessage message=receive();
                 if(message!=null){
-                    iceLandAgents.put(message.getSender(),message.getContent());
-                    System.out.println(message.getContent());
+
+                    int fitness=Integer.parseInt(message.getContent().split(":")[1]);
+                    String results = message.getContent().split(":")[0];
+                    iceLandAgents.put(results,fitness);
+
                 }else {
                     block();
                 }
