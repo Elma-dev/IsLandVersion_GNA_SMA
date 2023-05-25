@@ -1,7 +1,4 @@
-import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.Behaviour;
-import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.core.behaviours.SequentialBehaviour;
 import jade.domain.DFService;
@@ -13,10 +10,9 @@ import sequencial.GAUtils;
 import sequencial.Individual;
 import sequencial.Population;
 
-import java.util.Arrays;
 import java.util.Random;
 
-public class IceLandAgent extends Agent {
+public class IsLandAgent extends Agent {
 
     Population population=new Population();
     Random rnd=new Random();

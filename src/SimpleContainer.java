@@ -4,7 +4,6 @@ import jade.core.Runtime;
 import jade.wrapper.AgentContainer;
 import jade.wrapper.AgentController;
 import jade.wrapper.StaleProxyException;
-import sequencial.GAUtils;
 
 public class SimpleContainer {
     public static void main(String[] args) throws StaleProxyException {
@@ -14,7 +13,7 @@ public class SimpleContainer {
         AgentContainer agentContainer = runtime.createAgentContainer(profile);
         AgentController mainAgent=null;
         for (int i = 0; i< 3; i++){
-            mainAgent = agentContainer.createNewAgent(String.valueOf(i), IceLandAgent.class.getName(), new Object[]{});
+            mainAgent = agentContainer.createNewAgent(String.valueOf(i), IsLandAgent.class.getName(), new Object[]{});
             mainAgent.start();
         }
 
