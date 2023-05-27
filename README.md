@@ -6,3 +6,24 @@ With this approach, we divide the problem into smaller ones and have each agent 
 The working approach is different between this method and the first one (https://github.com/Elma-dev/GA_using_SMA) (see the schema).
 ```
 # 🕸 Schema of IsLandVersion
+![gna](https://github.com/Elma-dev/IsLandVersion_GNA_SMA/assets/67378945/56a2881b-ca14-4673-9038-ab79fee2ffaf)
+
+# 🌳 Project Structure
+```
+├── IsLandAgent.java
+├── Main.java
+├── MainContainer.java
+├── MasterAgent.java
+├── MasterContainer.java
+├── sequencial
+└── SimpleContainer.java
+
+```
+
+```
+├── AGApp.java
+├── GAUtils.java
+├── Individual.java
+└── Population.java
+
+```
