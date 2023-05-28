@@ -13,13 +13,9 @@ import sequencial.Population;
 import java.util.Random;
 
 public class IsLandAgent extends Agent {
-
     Population population=new Population();
-    Random rnd=new Random();
     DFAgentDescription dfAgentDescription=new DFAgentDescription();
     ServiceDescription serviceDescription=new ServiceDescription();
-    SequentialBehaviour sequentialBehaviour=new SequentialBehaviour();
-
     @Override
     protected void setup() {
         dfAgentDescription=new DFAgentDescription();
@@ -28,24 +24,7 @@ public class IsLandAgent extends Agent {
         serviceDescription.setType("iceAgent");
         serviceDescription.setName("ga_ma");
         dfAgentDescription.addServices(serviceDescription);
-//        final AID[] masterAgent = {null};
-//        addBehaviour(new Behaviour() {
-//            @Override
-//            public void action() {
-//                ACLMessage message=receive();
-//                if (message!=null){
-//                    masterAgent[0] =message.getSender();
-//                }
-//                else {
-//                    block();
-//                }
-//            }
-//
-//            @Override
-//            public boolean done() {
-//                return masterAgent[0] !=null;
-//            }
-//        });
+
         addBehaviour(new OneShotBehaviour() {
             @Override
             public void action() {
@@ -79,7 +58,4 @@ public class IsLandAgent extends Agent {
             }
         });
     }
-
-
-
-    }
+}

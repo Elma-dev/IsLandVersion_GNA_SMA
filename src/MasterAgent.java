@@ -15,8 +15,6 @@ import java.util.List;
 public class MasterAgent extends Agent {
     SequentialBehaviour sequentialBehaviour=new SequentialBehaviour();
 
-    HashMap<String,Integer> targetFit=new HashMap<>();
-
     DFAgentDescription dfAgentDescription=new DFAgentDescription();
     ServiceDescription serviceDescription=new ServiceDescription();
     HashMap<String,Integer> iceLandAgents=new HashMap<>();
